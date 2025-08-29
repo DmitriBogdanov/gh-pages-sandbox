@@ -6,33 +6,41 @@ site_name: GH Pages Sandbox
 
 site_url: https://dmitribogdanov.github.io/gh-pages-sandbox/
 
-repo_url: https://github.com/DmitriBogdanov/gh-pages-sandbox
+repo_url: https://github.com/DmitriBogdanov/UTL
 
-repo_name: DmitriBogdanov/gh-pages-sandbox
+repo_name: DmitriBogdanov/UTL
 
 # ===========================
 # --- Markdown extensions ---
 # ===========================
 
-# We need 2 extensions:
-#    1. Github/Obsidian-flavor callouts
-#    2. Embedded LaTeX
+# We need 3 extensions:
+#    1. Github-flavor callouts
+#    2. LaTeX
+#    3. Code blocks nested in block quotes
 #
 # Default 'admonition' plugin uses a different syntax so it's not suitable for callouts.
 # Thankfully, we can still achieve it with 3rd party plugins.
 #
 # [install 3rd party plugins]: 'pip install markdown-callouts'
-#
-# Note: 'markdown-callouts' does not have colors set up for '[!Important]'
 
 markdown_extensions:
-  - github-callouts
-  - pymdownx.arithmatex:
-      generic: true
+  - github-callouts      # enables Github-flavour callouts
+  - pymdownx.arithmatex: # enables KaTeX parser
+      generic: true      #
+  - pymdownx.superfences # enables nesting of code and content blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
 extra_javascript:
   - mkdocs/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
 
@@ -51,6 +59,7 @@ theme:
   name: material
   
   icon:
+    logo: material/tools
     repo: fontawesome/brands/github
   
   # Color palette with a light/dark mode toggle
@@ -58,21 +67,29 @@ theme:
     # Light mode
     - scheme: default
       toggle:
-        icon: material/brightness-4
+        icon: material/toggle-switch
         name: Switch to dark mode
       primary: deep purple
-      accent: blue
+      accent: purple
     # Dark mode 
     - scheme: slate
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch-off
         name: Switch to light mode
-      primary: deep purple
-      accent: blue
+      primary: black
+      accent: light blue
       
   features:
-      - toc.integrate
-      # - navigation.sections
-      # adds integrated table of contents to the sidebar
-      # - navigation.top
-      # adds "back to the top" button when scrolling up
+    - toc.integrate     # adds integrated table of contents to the sidebar
+    - content.code.copy # add copy button to code blocks
+    - search.suggest    # adds greyed-out suggestion to the search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/DmitriBogdanov
+      
+copyright: Copyright &copy; 2023 Dmitri Bogdanov
+
+extra_css:
+  - mkdocs/callouts.css # a fix for 'markdown-callouts' plugin missing the style for '[!Important]'

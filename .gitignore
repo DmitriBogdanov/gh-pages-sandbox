@@ -12,6 +12,7 @@
 !*.hpp
 # > Scripts
 !*.js
+!*.css
 # > Docs
 !*.md
 !*.svg

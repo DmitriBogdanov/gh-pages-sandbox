@@ -1,3 +1,13 @@
+# __________________________________ CONTENTS ___________________________________
+#
+#    This is a workflow file for GitHub Actions builds and publishes a copy of
+#    documentation built with MkDocs Material as a static website.
+#
+#    This workflow is effectively a refactored version of
+#    the sample  provided  by MkDocs Material documentation:
+#    https://squidfunk.github.io/mkdocs-material/publishing-your-site/
+# _______________________________________________________________________________
+
 name: "Deploy Github Pages"
 
 on:
