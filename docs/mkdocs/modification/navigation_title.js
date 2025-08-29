@@ -9,8 +9,5 @@
 //    the navigation.
 // _______________________________________________________________________________
 
-let elements = document.getElementsByClassName('md-nav__title') // array, will only contain one element
-
-for (let element of elements) {
-    element.innerHTML = "UTL"
-}
+[...document.getElementsByClassName('md-nav__title')] // always contains a single element
+    .forEach(el => el.innerHTML = "UTL")

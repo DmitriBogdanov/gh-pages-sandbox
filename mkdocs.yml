@@ -36,7 +36,8 @@ extra_javascript:
   - mkdocs/katex.js                                           # standard KaTeX includes
   - https://unpkg.com/katex@0/dist/katex.min.js               #
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js #
-  - mkdocs/replace_title.js                                   # sets navigation title separately from the header
+  - mkdocs/modification/navigation_title.js                   # sets navigation title separately from the header
+  - mkdocs/modification/back_to_readme.js
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
