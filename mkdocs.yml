@@ -2,7 +2,9 @@
 # --- Core ---
 # ============
 
-site_name: GH Pages Sandbox
+site_name: "UTL&nbsp;&nbsp;|&nbsp;&nbsp;Collection of self-contained header-only libraries for C++17"
+# double-space gives a nicer spacing to the title, since HTML collapses repeated
+# whitespace by default, we use a non-breaking-space character instead
 
 site_url: https://dmitribogdanov.github.io/gh-pages-sandbox/
 
@@ -29,17 +31,12 @@ markdown_extensions:
   - pymdownx.arithmatex: # enables KaTeX parser
       generic: true      #
   - pymdownx.superfences # enables nesting of code and content blocks
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
 
 extra_javascript:
-  - mkdocs/katex.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - mkdocs/katex.js                                           # standard KaTeX includes
+  - https://unpkg.com/katex@0/dist/katex.min.js               #
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js #
+  - mkdocs/replace_title.js                                   # sets navigation title separately from the header
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
@@ -63,7 +60,14 @@ theme:
     repo: fontawesome/brands/github
   
   # Color palette with a light/dark mode toggle
-  palette: 
+  palette:
+    # Dark mode (default)
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to light mode
+      primary: black
+      accent: light blue
     # Light mode
     - scheme: default
       toggle:
@@ -71,19 +75,14 @@ theme:
         name: Switch to dark mode
       primary: deep purple
       accent: purple
-    # Dark mode 
-    - scheme: slate
-      toggle:
-        icon: material/toggle-switch-off
-        name: Switch to light mode
-      primary: black
-      accent: light blue
       
   features:
     - toc.integrate     # adds integrated table of contents to the sidebar
+    - toc.follow        # makes the sidebar automatically scroll to keep current TOC heading visible
     - content.code.copy # add copy button to code blocks
     - search.suggest    # adds greyed-out suggestion to the search
 
+# Footer configuration
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -91,5 +90,6 @@ extra:
       
 copyright: Copyright &copy; 2023 Dmitri Bogdanov
 
+# Fix for 'markdown-callouts' plugin missing the style for '[!Important]'
 extra_css:
-  - mkdocs/callouts.css # a fix for 'markdown-callouts' plugin missing the style for '[!Important]'
+  - mkdocs/callouts.css

@@ -1,10 +1,8 @@
 # Github Markdown
 
-# Standard markdown
+## Standard markdown
 
-## Headings
-
-### Heading 3
+### Headings
 
 #### Heading 4
 
@@ -12,19 +10,19 @@
 
 ###### Heading 6
 
-## Bullet Lists
+### Bullet Lists
 
 - Item 1
 - Item 2
 - Item 3
 
-## Numbered lists
+### Numbered lists
 
 1. Item 1
 2. Item 2
 3. Item 3
 
-## Nested lists
+### Nested lists
 
 - Item 1
   - Item 1.1
@@ -35,7 +33,7 @@
   - Item 2.2
   - Item 2.3
 
-## Text
+### Text
 
 Regular
 
@@ -45,7 +43,7 @@ Regular
 
 ***Bold italic***
 
-## Blocks
+### Blocks
 
 > This is a block
 
@@ -65,7 +63,7 @@ Regular
 > }
 > ```
 
-## Code blocks
+### Code blocks
 
 ```
 Regular text 1
@@ -89,7 +87,7 @@ template <class R, class L>
 }
 ```
 
-## Horizontal rules
+### Horizontal rules
 
 Text 1
 
@@ -101,19 +99,19 @@ Text 2
 
 Text 3
 
-## Links
+### Links
 
 [This is a link]()
 
 [`This is also a link`]()
 
-## Images
+### Images
 
 ![Image](images/test_image.svg)
 
-# Github Flavor
+## Github Flavor
 
-## Callouts
+### Callouts
 
 Without caps (works in GitHub):
 
@@ -149,13 +147,13 @@ With caps (more compatible):
 > [!CAUTION]
 > Negative potential consequences of an action.
 
-## LaTeX
+### LaTeX
 
 Evaluates $|x|$, $\mathrm{sign} (x)$, $x^2$, $x^3$, $x^{-1}$, or $H(x)$. 
 
 Evaluates $\dfrac{a + b}{2}$ or $|a - b|$ without overflow.
 
-## HTML images
+### HTML images
 
 Without a link:
 
@@ -165,9 +163,9 @@ With a link:
 
 [<img src ="./images/badge_semver.svg">](https://semver.org/)
 
-# Other flavors
+## Other flavors
 
-## Admonitions
+### Admonitions
 
 !!! Note
     Admonition-flavored callout
