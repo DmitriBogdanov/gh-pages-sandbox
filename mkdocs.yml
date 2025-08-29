@@ -6,6 +6,10 @@ site_name: GH Pages Sandbox
 
 site_url: https://dmitribogdanov.github.io/gh-pages-sandbox/
 
+repo_url: https://github.com/DmitriBogdanov/gh-pages-sandbox
+
+repo_name: DmitriBogdanov/gh-pages-sandbox
+
 # ===========================
 # --- Markdown extensions ---
 # ===========================
