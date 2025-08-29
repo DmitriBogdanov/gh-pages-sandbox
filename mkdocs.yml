@@ -50,6 +50,9 @@ plugins:
 theme:
   name: material
   
+  icon:
+    repo: fontawesome/brands/github
+  
   # Color palette with a light/dark mode toggle
   palette: 
     # Light mode
