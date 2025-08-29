@@ -1,0 +1,17 @@
+# 
+#
+#
+
+nav:
+  - Home: index.md
+  - Modules:
+    - module_thing_1.md
+    - module_thing_2.md
+    - module_thing_3.md
+  - Guides:
+    - guide_gh_markdown.md
+    - guide_setup_mkdocs.md
+  - Blog:
+    - blog/post_1.md
+    - blog/post_2.md
+    - blog/post_3.md

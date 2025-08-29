@@ -9,9 +9,9 @@
 # ...
 # Whitelist allowed extensions
 # > Code
-# ...
+!*.hpp
 # > Scripts
-# ...
+!*.js
 # > Docs
 !*.md
 !*.svg

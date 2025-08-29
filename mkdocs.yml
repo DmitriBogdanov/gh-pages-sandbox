@@ -1,0 +1,71 @@
+# ============
+# --- Core ---
+# ============
+
+site_name: GH Pages Sandbox
+
+site_url: https://dmitribogdanov.github.io/gh-pages-sandbox/
+
+# ===========================
+# --- Markdown extensions ---
+# ===========================
+
+# We need 2 extensions:
+#    1. Github/Obsidian-flavor callouts
+#    2. Embedded LaTeX
+#
+# Default 'admonition' plugin uses a different syntax so it's not suitable for callouts.
+# Thankfully, we can still achieve it with 3rd party plugins.
+#
+# [install 3rd party plugins]: 'pip install markdown-callouts'
+#
+# Note: 'markdown-callouts' does not have colors set up for '[!Important]'
+
+markdown_extensions:
+  - github-callouts
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - mkdocs/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+# =========================
+# --- Style & structure ---
+# =========================
+
+# [install 3rd party plugins]: 'pip install mkdocs-awesome-nav'
+
+plugins:
+  - offline     # enables HTML with relative paths
+  - search      # enables search function
+  - awesome-nav # enables navigation hierarchy specified by '.nav.yml' rather than directory structure
+
+theme:
+  name: material
+  
+  # Color palette with a light/dark mode toggle
+  palette: 
+    # Light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+      primary: deep purple
+      accent: blue
+    # Dark mode 
+    - scheme: slate
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+      primary: deep purple
+      accent: blue
+      
+  features:
+      - toc.integrate
+      # - navigation.sections
+      # adds integrated table of contents to the sidebar
+      # - navigation.top
+      # adds "back to the top" button when scrolling up

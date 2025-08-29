@@ -1,4 +1,6 @@
-# Regular markdown
+# Github Markdown
+
+# Standard markdown
 
 ## Headings
 
@@ -113,6 +115,8 @@ Text 3
 
 ## Callouts
 
+Without caps (works in GitHub):
+
 > [!Note]  
 > Highlights information that users should take into account, even when skimming.
 
@@ -126,6 +130,23 @@ Text 3
 > Critical content demanding immediate user attention due to potential risks.
 
 > [!Caution]
+> Negative potential consequences of an action.
+
+With caps (more compatible):
+
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]  
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
 > Negative potential consequences of an action.
 
 ## LaTeX
@@ -142,4 +163,23 @@ Without a link:
 
 With a link:
 
-[<img src ="images/badge_semver.svg">](https://semver.org/)
+[<img src ="./images/badge_semver.svg">](https://semver.org/)
+
+# Other flavors
+
+## Admonitions
+
+!!! Note
+    Admonition-flavored callout
+    
+!!! Tip
+    Admonition-flavored callout
+    
+!!! Important
+    Admonition-flavored callout
+    
+!!! Warning
+    Admonition-flavored callout
+    
+!!! Caution
+    Admonition-flavored callout
