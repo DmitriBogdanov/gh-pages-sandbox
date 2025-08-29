@@ -1,0 +1,25 @@
+# Ignore everything
+*
+
+# Whitelist directories
+!*/
+# Whitelist git config
+!.gitignore
+# Whitelist toolchain configuration files
+# ...
+# Whitelist allowed extensions
+# > Code
+# ...
+# > Scripts
+# ...
+# > Docs
+!*.md
+!*.svg
+# > Data
+# ...
+# > Website
+!*.yml
+
+# Ignore build & temporary directories regardless of their contents
+.vscode/
+snippets/
