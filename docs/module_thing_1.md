@@ -79,3 +79,13 @@ static_assert(thing1::func_1(11, 0) == thing1::func_2(12, 0));
 static_assert(thing1::func_1(11, 0) == thing1::func_3(13, 0));
 static_assert(thing1::func_1(11, 0) == thing1::func_4(14, 0));
 ```
+
+## Notes
+
+Here is a theme-aware SVG:
+
+<img src="images/theme_aware.svg" class="theme-aware-svg">
+
+<img src="images/graph.svg" class="theme-aware-svg">
+
+<img src="images/item.png" class="theme-aware-svg">

@@ -1,16 +1,23 @@
+# __________________________________ CONTENTS ___________________________________
+#
+#    This is a MkDocs Material config for automatically deployed GitHub Pages,
+#    see https://squidfunk.github.io/mkdocs-material/
+# _______________________________________________________________________________
+
 # ============
 # --- Core ---
 # ============
 
-site_name: "UTL&nbsp;&nbsp;|&nbsp;&nbsp;Collection of self-contained header-only libraries for C++17"
-# double-space gives a nicer spacing to the title, since HTML collapses repeated
-# whitespace by default, we use a non-breaking-space character instead
+site_name: "gh-pages-sandbox"
+# larger spacing gives a nicer look to the title, since HTML collapses repeated
+# whitespace by default, we use a non-breaking-space character instead, this could
+# probably achieved in a more flexible way using overrides
 
 site_url: https://dmitribogdanov.github.io/gh-pages-sandbox/
 
-repo_url: https://github.com/DmitriBogdanov/UTL
+repo_url: https://github.com/DmitriBogdanov/gh-pages-sandbox
 
-repo_name: DmitriBogdanov/UTL
+repo_name: DmitriBogdanov/gh-pages-sandbox
 
 # ===========================
 # --- Markdown extensions ---
@@ -33,14 +40,10 @@ markdown_extensions:
   - pymdownx.superfences # enables nesting of code and content blocks
 
 extra_javascript:
-  - mkdocs/katex.js                                           # standard KaTeX includes
-  - https://unpkg.com/katex@0/dist/katex.min.js               #
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js #
-  - mkdocs/modification/navigation_title.js                   # sets navigation title separately from the header
-  - mkdocs/modification/back_to_readme.js
-
-extra_css:
-  - https://unpkg.com/katex@0/dist/katex.min.css
+  - mkdocs/mathjax.js                                # standard Mathjax includes
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js #
+  - mkdocs/modification/header_title.js              # sets header title separately from site name
+  - mkdocs/modification/relative_links.js            # adjusts relative links to work with the website
 
 # =========================
 # --- Style & structure ---
@@ -55,6 +58,8 @@ plugins:
 
 theme:
   name: material
+  
+  favicon: images/icon_site_logo.ico
   
   icon:
     logo: material/tools
@@ -78,10 +83,11 @@ theme:
       accent: purple
       
   features:
-    - toc.integrate     # adds integrated table of contents to the sidebar
-    - toc.follow        # makes the sidebar automatically scroll to keep current TOC heading visible
-    - content.code.copy # add copy button to code blocks
-    - search.suggest    # adds greyed-out suggestion to the search
+    - toc.follow                  # makes the sidebar automatically scroll to keep current TOC heading visible
+    - content.code.copy           # adds copy button to code blocks
+    - search.suggest              # adds greyed-out suggestion to the search
+    - navigation.instant          # dispatches internal links without refresh (makes loading feel smoother)
+    - navigation.instant.progress # shows loading bar if page load takes over 400ms
 
 # Footer configuration
 extra:
@@ -94,3 +100,5 @@ copyright: Copyright &copy; 2023 Dmitri Bogdanov
 # Fix for 'markdown-callouts' plugin missing the style for '[!Important]'
 extra_css:
   - mkdocs/callouts.css
+  - mkdocs/width.css
+  - mkdocs/theme.css
