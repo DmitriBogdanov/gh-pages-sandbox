@@ -55,6 +55,7 @@ plugins:
   - offline     # enables HTML with relative paths
   - search      # enables search function
   - awesome-nav # enables navigation hierarchy specified by '.nav.yml' rather than directory structure
+  - social
 
 theme:
   name: material

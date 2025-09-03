@@ -86,6 +86,8 @@ Here is a theme-aware SVG:
 
 <img src="images/theme_aware.svg" class="theme-aware-svg">
 
-<img src="images/graph.svg" class="theme-aware-svg">
+<img src="images/graph.svg">
 
-<img src="images/item.png" class="theme-aware-svg">
+<img src="images/dark_graph.png">
+
+<img src="images/item.png">
